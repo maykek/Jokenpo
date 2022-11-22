@@ -1,15 +1,24 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
-
-// You can import from local files
+import { View, StyleSheet, StatusBar } from 'react-native';
 import JOKENPO from './components/JOKENPO';
 
 export default function App() {
   return (
-  <View>
-    <JOKENPO/>
-  </View>
+    <View style={styles.container}>
+     <StatusBar barStyle="dark-content" />
+      <JOKENPO/>
+    </View>
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+
+ 
